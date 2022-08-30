@@ -1,20 +1,38 @@
+import models.AnimalAcuatico;
+import models.AnimalTerrestre;
 import models.Human;
+import models.SerVivo;
 
 import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
+        SerVivo humano1 = new Human();
+        SerVivo humano2 = new Human(1, "Diego", (short) 30);
+
+
+        SerVivo gatoPerez = new AnimalTerrestre(
+                "Felino", "Criollo", "Gato Perez", 2, 4);
+
+        SerVivo goldFish = new AnimalAcuatico(
+                "Pez", "Goldie", "Pato el Pez", 2, 0);
+
+        System.out.println(gatoPerez.moverse());
+        System.out.println(goldFish.moverse());
+    }
+
+    public void claseUno(){
         System.out.println("Hello world");
 
         System.out.println("These are Java's basic data types:");
 
         String java_data_types =
-            "   int myNum = 5;               // Integer (whole number)\n" +
-            "   float myFloatNum = 5.99f;    // Floating point number\n" +
-            "   char myLetter = 'D';         // Character\n" +
-            "   boolean myBool = true;       // Boolean\n" +
-            "   String myText = \"Hello\";     // String";
+                "   int myNum = 5;               // Integer (whole number)\n" +
+                        "   float myFloatNum = 5.99f;    // Floating point number\n" +
+                        "   char myLetter = 'D';         // Character\n" +
+                        "   boolean myBool = true;       // Boolean\n" +
+                        "   String myText = \"Hello\";     // String";
 
 
         System.out.println(java_data_types);
